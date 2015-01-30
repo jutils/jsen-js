@@ -23,7 +23,13 @@ Simply run command: `mvn package`
 
 ### Using Maven
 
-(will be completed soon)
+```
+<dependency>
+	<groupId>com.jsen</groupId>
+	<artifactId>jsen-js</artifactId>
+	<version>0.0.1</version>
+</dependency>
+```
 
 ### Custom way
 
