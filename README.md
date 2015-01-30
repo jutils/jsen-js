@@ -1,4 +1,4 @@
-JSEN - JavaScript Engine
+JSEN JS - JavaScript Engine for Java
 ======
 
 Implementation of JavaScript engine for Java which makes easier to execute scripts in Java code. Interpreting of JavaScript is assured by [Rhino](https://developer.mozilla.org/en-US/docs/Rhino). Library provides especially simple and customizable way of exporting Java objects to JavaScript. Exporting is assured automatically or using special Java annotations. Interface that is used for executing scripts is familiar to JSR 223.
