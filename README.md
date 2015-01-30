@@ -1,9 +1,9 @@
-JSEN - JavaScript Engine
+JSEN JS - JavaScript Engine for Java
 ======
 
 Implementation of JavaScript engine for Java which makes easier to execute scripts in Java code. Interpreting of JavaScript is assured by [Rhino](https://developer.mozilla.org/en-US/docs/Rhino). Library provides especially simple and customizable way of exporting Java objects to JavaScript. Exporting is assured automatically or using special Java annotations. Interface that is used for executing scripts is familiar to JSR 223.
 
-This library is fork of [ScriptBox](https://github.com/ITman1/ScriptBox).
+This library is fork of [ScriptBox](https://github.com/ITman1/ScriptBox) and is based on the abstract engine core [jsen-core](https://github.com/ITman1/jsen-core).
 
 ## Building library
 
@@ -41,10 +41,10 @@ public class GlobalObject {
 	public void print(Object obj) throws TransformationException {}
 }
 
-Generator generator = new Generator(transformationState);
+GlobalObject globalObject = new GlobalObject();
 		
 AbstractScriptEngine engine = ScriptEngineManager.getInstance().getBrowserScriptEngine("text/javascript", 
-	new GlobalObjectScriptSettings<Generator>(generator)
+	new GlobalObjectScriptSettings<Generator>(globalObject)
 );
 
 engine.eval(script);
@@ -57,12 +57,8 @@ For more examples see:
 
 # Known issues
 
-Project is still in phase of development and targets the experimental frame
-of new HTML 5.1 specification which has not been released yet, so bugs may 
-occur in the current implementation or also in specification itself.
-
 If you run into any bug, please report on:  
-   https://github.com/ITman1/jsen/issues
+   https://github.com/ITman1/jsen-js/issues
 
 ## Issue list:
 
