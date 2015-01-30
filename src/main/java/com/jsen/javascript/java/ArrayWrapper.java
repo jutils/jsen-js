@@ -3,13 +3,11 @@ package com.jsen.javascript.java;
 import java.util.List;
 
 import org.mozilla.javascript.Undefined;
-import org.mozilla.javascript.annotations.JSFunction;
-import org.mozilla.javascript.annotations.JSGetter;
 
-import com.jsen.Wrapper;
-import com.jsen.annotation.ScriptClass;
-import com.jsen.annotation.ScriptFunction;
-import com.jsen.annotation.ScriptGetter;
+import com.jsen.core.Wrapper;
+import com.jsen.core.annotation.ScriptClass;
+import com.jsen.core.annotation.ScriptFunction;
+import com.jsen.core.annotation.ScriptGetter;
 import com.jsen.javascript.JsCallback;
 
 @ScriptClass

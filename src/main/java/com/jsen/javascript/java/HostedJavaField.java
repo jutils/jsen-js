@@ -22,10 +22,10 @@ package com.jsen.javascript.java;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import com.jsen.reflect.ClassField;
-import com.jsen.reflect.ObjectField;
-
 import org.mozilla.javascript.Scriptable;
+
+import com.jsen.core.reflect.ClassField;
+import com.jsen.core.reflect.ObjectField;
 
 /**
  * Class that serves as an interface for setting and getting 

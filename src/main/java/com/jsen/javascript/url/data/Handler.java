@@ -1,5 +1,5 @@
 /**
- * EventAdapter.java
+ * Handler.java
  * (c) Radim Loskot and Radek Burget, 2013-2014
  *
  * ScriptBox is free software: you can redistribute it and/or modify
@@ -17,33 +17,40 @@
  * 
  */
 
-package com.jsen.javascript.wrap;
+package com.jsen.javascript.url.data;
 
-import com.jsen.core.adapter.Adapter;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLStreamHandler;
 
 /**
- * Adapter which adapts Java Exceptions into JavaScript Error.
- * 
+ * Handler that enables us to use DATA protocol. 
+ *
  * @author Radim Loskot
  * @version 0.9
  * @since 0.9 - 21.4.2014
  */
-public class ErrorAdapter implements Adapter {
+public class Handler extends URLStreamHandler {
 	@Override
-	public Object getProvider(Object obj) {
-		if (obj instanceof Throwable) {
-			return new AdaptedError((Throwable)obj);
+	protected URLConnection openConnection(URL url) throws IOException {
+		return new UserURLConnection(url);
+	}
+	
+	private static class UserURLConnection extends URLConnection {
+		public UserURLConnection(URL url) {
+			super(url);
 		}
-		return null;
-	}
-
-	@Override
-	public Class<?> getAdapteeClass() {
-		return Throwable.class;
-	}
-
-	@Override
-	public Class<?> getResultClass() {
-		return AdaptedError.class;
+		
+		@Override
+		public void connect() throws IOException {
+		}
+		
+		@Override
+		public InputStream getInputStream() throws IOException {
+			return null;
+		}
 	}
 }

@@ -19,11 +19,11 @@
 
 package com.jsen.javascript.wrap;
 
-import com.jsen.exceptions.InternalException;
-
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.WrapFactory;
+
+import com.jsen.core.exceptions.InternalException;
 
 /**
  * Base class for classes that represent decoratable wrap factories.

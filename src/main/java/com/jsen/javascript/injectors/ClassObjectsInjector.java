@@ -25,11 +25,11 @@ import java.util.List;
 import javax.script.Bindings;
 import javax.script.ScriptContext;
 
-import com.jsen.annotation.ScriptAnnotation;
+import com.jsen.core.annotation.ScriptAnnotation;
 import com.jsen.javascript.JavaScriptInjector;
 import com.jsen.javascript.java.ClassScriptable;
-import com.jsen.url.URL;
-import com.jsen.url.URLUtils;
+import com.jsen.javascript.url.URL;
+import com.jsen.javascript.url.URLUtils;
 
 /**
  * Injector that injects script visible class instances into engine scope.

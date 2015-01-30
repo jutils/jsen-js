@@ -23,10 +23,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.jsen.AbstractScriptEngine;
-import com.jsen.AbstractScriptEngineFactory;
-import com.jsen.GlobalObjectScriptSettings;
-import com.jsen.ScriptSettings;
+import com.jsen.core.AbstractScriptEngine;
+import com.jsen.core.AbstractScriptEngineFactory;
+import com.jsen.core.GlobalObjectScriptSettings;
+import com.jsen.core.ScriptSettings;
+import com.jsen.core.annotation.ScriptEngineFactory;
 import com.jsen.javascript.injectors.ClassObjectsInjector;
 
 /**

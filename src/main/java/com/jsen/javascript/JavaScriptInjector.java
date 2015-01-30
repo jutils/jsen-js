@@ -19,7 +19,7 @@
 
 package com.jsen.javascript;
 
-import com.jsen.ScriptContextInjector;
+import com.jsen.core.ScriptContextInjector;
 
 /**
  * Abstract class for all injectors that are only JavaScript specific.

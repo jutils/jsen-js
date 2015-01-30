@@ -24,12 +24,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.ClassUtils;
-
-import com.jsen.exceptions.InternalException;
-import com.jsen.reflect.ObjectMembers;
-
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.Undefined;
+
+import com.jsen.core.exceptions.InternalException;
+import com.jsen.core.reflect.ObjectMembers;
 
 /**
  * Extends hosted Java object class about accessing the collection 

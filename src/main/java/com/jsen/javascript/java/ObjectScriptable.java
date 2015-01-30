@@ -22,11 +22,11 @@ package com.jsen.javascript.java;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import com.jsen.reflect.ObjectField;
-import com.jsen.reflect.ObjectFunction;
-
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
+
+import com.jsen.core.reflect.ObjectField;
+import com.jsen.core.reflect.ObjectFunction;
 
 /**
  * Class that adds functionality of the defining class members into this scriptable object.

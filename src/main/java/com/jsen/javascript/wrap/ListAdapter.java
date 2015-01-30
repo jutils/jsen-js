@@ -21,7 +21,7 @@ package com.jsen.javascript.wrap;
 
 import java.util.List;
 
-import com.jsen.adapter.Adapter;
+import com.jsen.core.adapter.Adapter;
 
 /**
  * Adapter which adapts Java Exceptions into JavaScript Error.

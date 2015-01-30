@@ -19,9 +19,9 @@
 
 package com.jsen.javascript.java;
 
-import com.jsen.annotation.ScriptAnnotation;
-
 import org.mozilla.javascript.Scriptable;
+
+import com.jsen.core.annotation.ScriptAnnotation;
 
 /**
  * Class that wraps class object into Scriptable interface.

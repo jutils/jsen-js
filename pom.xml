@@ -6,24 +6,29 @@
   <name>jsen-js</name>
   
   <dependencies>
-  	<dependency>
-			<groupId>javax.ws.rs</groupId>
-			<artifactId>javax.ws.rs-api</artifactId>
-			<version>2.0</version>
-		</dependency>
-
-
+  	
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.0</version>
+			<groupId>com.jsen</groupId>
+			<artifactId>jsen-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-
+  	
 		<dependency>
 			<groupId>org.mozilla</groupId>
 			<artifactId>rhino</artifactId>
 			<version>1.7R4</version>
+		</dependency>
+  	
+  	<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+  
+  	<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0</version>
 		</dependency>
   
   </dependencies>

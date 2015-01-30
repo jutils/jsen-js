@@ -19,15 +19,15 @@
 
 package com.jsen.javascript.java;
 
-import com.jsen.javascript.JavaScriptEngine;
-import com.jsen.reflect.ClassFunction;
-import com.jsen.reflect.ObjectGetter;
-
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 import org.mozilla.javascript.TopLevel;
+
+import com.jsen.core.reflect.ClassFunction;
+import com.jsen.core.reflect.ObjectGetter;
+import com.jsen.javascript.JavaScriptEngine;
 
 /**
  * Class that represents the sealed global scope, which provides global properties 
@@ -41,7 +41,7 @@ public class ObjectTopLevel extends TopLevel {
 	private static final long serialVersionUID = -824471943182669084L;
 
 	protected Object globalObject;
-	protected JavaScriptEngine scriptEngine;
+	protected JavaScriptEngine<?> scriptEngine;
 	protected ObjectImplementor implementor;
 	
 	/**
@@ -51,7 +51,7 @@ public class ObjectTopLevel extends TopLevel {
 	 * @param scriptEngine Script engine which owns this global scope.
 	 * @param implementor Implementor that ensures the implementing of the global object into this scope.
 	 */
-	public ObjectTopLevel(Object globalObject, JavaScriptEngine scriptEngine, ObjectImplementor implementor) {
+	public ObjectTopLevel(Object globalObject, JavaScriptEngine<?> scriptEngine, ObjectImplementor implementor) {
 		this.globalObject = globalObject;
 		this.scriptEngine = scriptEngine;
 		this.implementor = implementor;
@@ -76,7 +76,7 @@ public class ObjectTopLevel extends TopLevel {
 	 * @param globalObject Global object to be implemented into this global scope.
 	 * @param scriptEngine Script engine which owns this global scope.
 	 */
-	public ObjectTopLevel(Object globalObject, JavaScriptEngine browserScriptEngine) {
+	public ObjectTopLevel(Object globalObject, JavaScriptEngine<?> browserScriptEngine) {
 		this(globalObject, browserScriptEngine, null);
 	}
 	
@@ -94,7 +94,7 @@ public class ObjectTopLevel extends TopLevel {
 	 * 
 	 * @return Associated script engine that owns this global scope.
 	 */
-	public JavaScriptEngine getBrowserScriptEngine() {
+	public JavaScriptEngine<?> getBrowserScriptEngine() {
 		return scriptEngine;
 	}
 	

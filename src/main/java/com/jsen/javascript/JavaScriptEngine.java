@@ -41,14 +41,14 @@ import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.TopLevel;
 import org.mozilla.javascript.Wrapper;
 
-import com.jsen.AbstractScriptEngineFactory;
-import com.jsen.GlobalObjectScriptEngine;
-import com.jsen.GlobalObjectScriptSettings;
-import com.jsen.annotation.ScriptAnnotationClassMembersResolverFactory;
+import com.jsen.core.AbstractScriptEngineFactory;
+import com.jsen.core.GlobalObjectScriptEngine;
+import com.jsen.core.GlobalObjectScriptSettings;
+import com.jsen.core.annotation.ScriptAnnotationClassMembersResolverFactory;
+import com.jsen.core.reflect.ClassMembersResolverFactory;
+import com.jsen.core.reflect.DefaultShutter;
 import com.jsen.javascript.java.ObjectScriptable;
 import com.jsen.javascript.java.ObjectTopLevel;
-import com.jsen.reflect.ClassMembersResolverFactory;
-import com.jsen.reflect.DefaultShutter;
 
 /**
  * JavaScript engine for the browser. It implements the Window object into 

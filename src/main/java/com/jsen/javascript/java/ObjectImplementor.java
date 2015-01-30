@@ -24,18 +24,18 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import com.jsen.AbstractScriptEngine;
-import com.jsen.exceptions.FieldException;
-import com.jsen.reflect.ClassField;
-import com.jsen.reflect.ClassFunction;
-import com.jsen.reflect.ClassMember;
-import com.jsen.reflect.ClassMembersResolverFactory;
-import com.jsen.reflect.DefaultObjectMembers;
-import com.jsen.reflect.ObjectField;
-import com.jsen.reflect.ObjectFunction;
-import com.jsen.reflect.ObjectMembers;
-
 import org.mozilla.javascript.ScriptableObject;
+
+import com.jsen.core.AbstractScriptEngine;
+import com.jsen.core.exceptions.FieldException;
+import com.jsen.core.reflect.ClassField;
+import com.jsen.core.reflect.ClassFunction;
+import com.jsen.core.reflect.ClassMember;
+import com.jsen.core.reflect.ClassMembersResolverFactory;
+import com.jsen.core.reflect.DefaultObjectMembers;
+import com.jsen.core.reflect.ObjectField;
+import com.jsen.core.reflect.ObjectFunction;
+import com.jsen.core.reflect.ObjectMembers;
 
 /**
  * Represents class that enables implementing the specific 

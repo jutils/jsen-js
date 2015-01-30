@@ -26,25 +26,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.lang3.ClassUtils;
-
-import com.jsen.core.reflect.FunctionJsCallbackAdapter;
-import com.jsen.core.reflect.JsCallback;
-import com.jsen.exceptions.FieldException;
-import com.jsen.exceptions.FunctionException;
-import com.jsen.exceptions.InternalException;
-import com.jsen.exceptions.ObjectException;
-import com.jsen.exceptions.UnknownException;
-import com.jsen.javascript.JavaScriptEngine;
-import com.jsen.reflect.ClassConstructor;
-import com.jsen.reflect.ClassField;
-import com.jsen.reflect.ClassFunction;
-import com.jsen.reflect.ClassMember;
-import com.jsen.reflect.ConstructorMember;
-import com.jsen.reflect.DefaultObjectMembers;
-import com.jsen.reflect.InvocableMember;
-import com.jsen.reflect.ObjectGetter;
-import com.jsen.reflect.ObjectMembers;
-
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
 import org.mozilla.javascript.NativeObject;
@@ -53,6 +34,24 @@ import org.mozilla.javascript.TopLevel;
 import org.mozilla.javascript.TopLevel.Builtins;
 import org.mozilla.javascript.Undefined;
 import org.mozilla.javascript.Wrapper;
+
+import com.jsen.core.exceptions.FieldException;
+import com.jsen.core.exceptions.FunctionException;
+import com.jsen.core.exceptions.InternalException;
+import com.jsen.core.exceptions.ObjectException;
+import com.jsen.core.exceptions.UnknownException;
+import com.jsen.core.reflect.ClassConstructor;
+import com.jsen.core.reflect.ClassField;
+import com.jsen.core.reflect.ClassFunction;
+import com.jsen.core.reflect.ClassMember;
+import com.jsen.core.reflect.ConstructorMember;
+import com.jsen.core.reflect.DefaultObjectMembers;
+import com.jsen.core.reflect.InvocableMember;
+import com.jsen.core.reflect.ObjectGetter;
+import com.jsen.core.reflect.ObjectMembers;
+import com.jsen.javascript.JavaScriptEngine;
+import com.jsen.javascript.JsCallback;
+import com.jsen.javascript.wrap.FunctionJsCallbackAdapter;
 
 /**
  * Creates scope for native Java object which contains its class 
@@ -218,8 +217,8 @@ public class HostedJavaObject extends ObjectScriptable implements Wrapper, Funct
 		
 	@Override
 	public Object unwrap() {
-		if (object instanceof com.jsen.Wrapper) {
-			return ((com.jsen.Wrapper<?>)object).unwrap();
+		if (object instanceof com.jsen.core.Wrapper) {
+			return ((com.jsen.core.Wrapper<?>)object).unwrap();
 		}
 		return object;
 	}

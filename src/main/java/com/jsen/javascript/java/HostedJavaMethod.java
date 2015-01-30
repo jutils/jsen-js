@@ -37,14 +37,12 @@ import org.mozilla.javascript.TopLevel.Builtins;
 import org.mozilla.javascript.Undefined;
 import org.mozilla.javascript.WrappedException;
 
-import com.jsen.exceptions.FunctionException;
-import com.jsen.exceptions.InternalException;
-import com.jsen.exceptions.UnknownException;
+import com.jsen.core.exceptions.FunctionException;
+import com.jsen.core.exceptions.UnknownException;
+import com.jsen.core.reflect.ClassFunction;
+import com.jsen.core.reflect.FunctionMember;
+import com.jsen.core.reflect.InvocableMember;
 import com.jsen.javascript.JavaScriptEngine;
-import com.jsen.reflect.ClassField;
-import com.jsen.reflect.ClassFunction;
-import com.jsen.reflect.FunctionMember;
-import com.jsen.reflect.InvocableMember;
 
 /**
  * Creates function scope for native Java method - wraps the native Java method

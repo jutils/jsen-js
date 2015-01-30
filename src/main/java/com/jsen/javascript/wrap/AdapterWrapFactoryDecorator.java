@@ -19,8 +19,8 @@
 
 package com.jsen.javascript.wrap;
 
-import com.jsen.adapter.Adapter;
-import com.jsen.adapter.AdapterRegistry;
+import com.jsen.core.adapter.Adapter;
+import com.jsen.core.adapter.AdapterRegistry;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;

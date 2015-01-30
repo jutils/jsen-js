@@ -20,9 +20,9 @@
 package com.jsen.javascript.wrap;
 
 import com.jsen.javascript.java.HostedJavaObject;
-import com.jsen.reflect.ClassMembersResolverFactory;
-import com.jsen.reflect.DefaultClassMembersResolverFactory;
-import com.jsen.reflect.DefaultObjectMembers;
+import com.jsen.core.reflect.ClassMembersResolverFactory;
+import com.jsen.core.reflect.DefaultClassMembersResolverFactory;
+import com.jsen.core.reflect.DefaultObjectMembers;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;

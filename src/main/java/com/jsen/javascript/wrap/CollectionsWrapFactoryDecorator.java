@@ -24,9 +24,9 @@ import java.util.Map;
 
 import com.jsen.javascript.java.ArrayWrapper;
 import com.jsen.javascript.java.HostedJavaCollection;
-import com.jsen.reflect.ClassMembersResolverFactory;
-import com.jsen.reflect.DefaultObjectMembers;
-import com.jsen.reflect.ObjectGetter;
+import com.jsen.core.reflect.ClassMembersResolverFactory;
+import com.jsen.core.reflect.DefaultObjectMembers;
+import com.jsen.core.reflect.ObjectGetter;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;

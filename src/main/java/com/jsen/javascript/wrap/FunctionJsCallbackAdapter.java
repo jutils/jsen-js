@@ -19,10 +19,10 @@
 
 package com.jsen.javascript.wrap;
 
+import org.mozilla.javascript.Function;
+
 import com.jsen.javascript.JsCallback;
 import com.jsen.javascript.java.HostedJavaMethod;
-
-import org.mozilla.javascript.Function;
 
 public class FunctionJsCallbackAdapter implements JsCallback {
 	protected Function function;

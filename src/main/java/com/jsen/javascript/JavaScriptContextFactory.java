@@ -19,18 +19,17 @@
 
 package com.jsen.javascript;
 
-import com.jsen.adapter.AdapterRegistry;
-import com.jsen.javascript.wrap.AdaptedList;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.ContextFactory;
+
+import com.jsen.core.adapter.AdapterRegistry;
+import com.jsen.core.reflect.ClassMembersResolverFactory;
 import com.jsen.javascript.wrap.AdapterWrapFactoryDecorator;
 import com.jsen.javascript.wrap.CollectionsWrapFactoryDecorator;
 import com.jsen.javascript.wrap.DefaultWrapFactoryDecorator;
 import com.jsen.javascript.wrap.ErrorAdapter;
 import com.jsen.javascript.wrap.ListAdapter;
 import com.jsen.javascript.wrap.WrapFactoryDecorator;
-import com.jsen.reflect.ClassMembersResolverFactory;
-
-import org.mozilla.javascript.Context;
-import org.mozilla.javascript.ContextFactory;
 
 /**
  * Context factory that is used for all JavaScript engines.
