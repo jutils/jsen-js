@@ -270,7 +270,7 @@ public class HostedJavaMethod extends FunctionObject {
 						//castedArgs[i] = Context.jsToJava(castedArgs[i], expectedType);
 					}
 					
-					castedArgs[i] = ClassField.wrap(expectedTypes[i], castedArgs[i]);
+					castedArgs[i] = HostedJavaObject.wrap(expectedTypes[i], castedArgs[i]);
 				}
 				
 				return castedArgs;

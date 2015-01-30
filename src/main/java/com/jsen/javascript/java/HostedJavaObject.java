@@ -27,6 +27,8 @@ import java.util.Set;
 
 import org.apache.commons.lang3.ClassUtils;
 
+import com.jsen.core.reflect.FunctionJsCallbackAdapter;
+import com.jsen.core.reflect.JsCallback;
 import com.jsen.exceptions.FieldException;
 import com.jsen.exceptions.FunctionException;
 import com.jsen.exceptions.InternalException;
@@ -398,7 +400,7 @@ public class HostedJavaObject extends ObjectScriptable implements Wrapper, Funct
 		object = JavaScriptEngine.jsToJava(object);
 		value = JavaScriptEngine.jsToJava(value);
 		Class<?> type = objectField.getFieldType();
-		value = ClassField.wrap(type, value);
+		value = wrap(type, value);
 		objectField.set(object, value);
 	}
 	
@@ -412,6 +414,35 @@ public class HostedJavaObject extends ObjectScriptable implements Wrapper, Funct
 	public static Object hostGet(ClassField objectField, Object object) {
 		object = JavaScriptEngine.jsToJava(object);
 		Object value = objectField.get(object);
-		return ClassField.unwrap(value);
+		return HostedJavaObject.unwrap(value);
+	}
+
+	// FIXME: It could be here some adapter/registry mechanism here
+	// FIXME: Here should not be referenced mozilla javascript packages, this should be generalized in future!
+	public static Object wrap(Class<?> type, Object value) {
+		if (type.equals(JsCallback.class) && value instanceof Function) {
+			value = new FunctionJsCallbackAdapter((Function)value);
+		}/* else if (type.equals(EventHandler.class) && value instanceof Function) {
+			value = new FunctionEventHandlerAdapter((Function)value);
+		} else if (type.equals(OnErrorEventHandler.class) && value instanceof Function) {
+			value = new FunctionOnErrorEventHandlerAdapter((Function)value);
+		} else if (type.equals(StateObject.class) && value instanceof Object) {
+			value = new StateObject(value);
+		}*/
+		
+		return value;
+	}
+	
+	// FIXME: It could be here some adapter/registry mechanism here, not hard coded...
+	public static Object unwrap(Object value) {
+		if (value instanceof FunctionJsCallbackAdapter) {
+			value = ((FunctionJsCallbackAdapter)value).getFunction();
+		}/* else if (value instanceof FunctionEventHandlerAdapter) {
+			value = ((FunctionEventHandlerAdapter)value).getFunction();
+		} else if (value instanceof StateObject) {
+			value = ((StateObject)value).getObject();
+		}*/
+		
+		return value;
 	}
 }

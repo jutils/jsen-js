@@ -36,6 +36,7 @@ import com.jsen.javascript.injectors.ClassObjectsInjector;
  * @version 0.9
  * @since 0.9 - 21.4.2014
  */
+@ScriptEngineFactory
 public class JavaScriptEngineFactory extends AbstractScriptEngineFactory {
 
 	private static List<String> mimeTypes;
