@@ -41,10 +41,10 @@ public class GlobalObject {
 	public void print(Object obj) throws TransformationException {}
 }
 
-Generator generator = new Generator(transformationState);
+GlobalObject globalObject = new GlobalObject();
 		
 AbstractScriptEngine engine = ScriptEngineManager.getInstance().getBrowserScriptEngine("text/javascript", 
-	new GlobalObjectScriptSettings<Generator>(generator)
+	new GlobalObjectScriptSettings<Generator>(globalObject)
 );
 
 engine.eval(script);
@@ -57,12 +57,8 @@ For more examples see:
 
 # Known issues
 
-Project is still in phase of development and targets the experimental frame
-of new HTML 5.1 specification which has not been released yet, so bugs may 
-occur in the current implementation or also in specification itself.
-
 If you run into any bug, please report on:  
-   https://github.com/ITman1/jsen/issues
+   https://github.com/ITman1/jsen-js/issues
 
 ## Issue list:
 
