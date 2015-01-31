@@ -29,6 +29,7 @@ import com.jsen.core.GlobalObjectScriptSettings;
 import com.jsen.core.ScriptSettings;
 import com.jsen.core.annotation.ScriptEngineFactory;
 import com.jsen.javascript.injectors.ClassObjectsInjector;
+import com.jsen.javascript.injectors.URLInjector;
 
 /**
  * JavaScript engine factory for creating the {@link JavaScriptEngine} instances.
@@ -60,6 +61,7 @@ public class JavaScriptEngineFactory extends AbstractScriptEngineFactory {
 		
 	public JavaScriptEngineFactory() {
 		registerScriptContextsInject(new ClassObjectsInjector());
+		registerScriptContextsInject(new URLInjector());
 	}
 	
 	@Override
