@@ -4,7 +4,7 @@ import javax.script.Bindings;
 import javax.script.ScriptContext;
 
 import com.jsen.core.ScriptContextInjector;
-import com.jsen.core.url.URL;
+import com.jsen.javascript.url.URL;
 
 /**
  * Implementation of the injector which adds the URL object into the script context.
